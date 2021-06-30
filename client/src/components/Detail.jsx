@@ -5,7 +5,7 @@ function Detail (props) {
   const info = props.cars.find((car) => (car.id === params.id))
 
   return (
-    <main>
+    <main id="card">
       <img src={info.fields.image} alt={info.fields.model}/>
       <h4>Make:{info.fields.make}</h4>
       <h4>Model:{info.fields.model}</h4>
