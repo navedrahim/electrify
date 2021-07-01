@@ -12,10 +12,10 @@ function Form(props) {
   const [image, setImage] = useState("");
   const history = useHistory();
   const params = useParams();
-  const editCar = props.cars.find((car) => car.id === params.id);
-  
+
   useEffect(() => {
-    if (useParams.id && props.cars.length > 0) {
+    if (params.id && props.cars.length > 0) {
+      const editCar = props.cars.find((car) => car.id === params.id);
       if (editCar) {
         setMake(editCar.fields.make);
         setModel(editCar.fields.model);
@@ -37,14 +37,7 @@ function Form(props) {
       price,
       image,
     };
-    // const putCar = {
-    //   make: editCar.fields.make,
-    //   model,
-    //   minRange,
-    //   maxRange,
-    //   price,
-    //   image,
-    // }
+
     if (params.id) {
       const carURL = `${baseURL}/${params.id}`;
       await axios.put(carURL, { fields: newCar }, config);
@@ -106,8 +99,7 @@ function Form(props) {
         onChange={(e) => setImage(e.target.value)}
         value={image}
         required
-        />
-
+      />
 
       <button type="submit">Submit</button>
     </form>
