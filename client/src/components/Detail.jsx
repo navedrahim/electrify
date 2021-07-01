@@ -1,8 +1,10 @@
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Detail(props) {
   const params = useParams();
   const info = props.cars.find((car) => car.id === params.id);
+  
 
   return (
     <main id="card">
@@ -12,6 +14,10 @@ function Detail(props) {
       <h4>Min Range:{info.fields.minRange} miles</h4>
       <h4>Max Range:{info.fields.maxRange} miles</h4>
       <h4>Price:${info.fields.price}</h4>
+
+      <Link to={`/edit/${info.id}`}>
+        <button>Edit Car!</button>
+      </Link>
     </main>
   );
 }

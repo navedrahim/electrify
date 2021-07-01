@@ -1,10 +1,20 @@
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  margin: 0 auto;
+  max-width: 768px;
+}
+
 img {
   max-width: 500px;
   height: auto;
 }
 
 
-Navbar {
+nav {
   display: flex;
-  
+  border-bottom: 5px solid black;
+  justify-content: space-between;
+  padding: 10px;
 }

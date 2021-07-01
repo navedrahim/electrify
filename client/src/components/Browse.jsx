@@ -8,11 +8,19 @@ function Browse(props) {
 
   return (
     <div>
+      <main>
+        <p>Can't Find What You're Looking For?</p>
+        <Link to="/new">Add a Car</Link>
+      </main>
+      
       {cars.map((car) => (
         <Link to={`/detail/${cars.id}`}>
           <Car key={car.id} car={car} setToggleFetch={setToggleFetch} />
         </Link>
       ))}
+      
+      
+      
     </div>
   );
 }

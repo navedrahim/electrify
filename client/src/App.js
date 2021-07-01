@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Browse from "./components/Browse";
 import Navbar from "./components/Navbar";
 import Detail from "./components/Detail";
+import Form from "./components/Form";
 import "./App.css";
 
 function App() {
@@ -28,6 +29,12 @@ function App() {
       </Route>
       <Route path="/detail/:id">
         <Detail cars={cars} setToggleFetch={setToggleFetch} />
+      </Route>
+     <Route path="/new">
+       <Form setToggleFetch={setToggleFetch}/>
+     </Route>
+      <Route path="/edit/:id">
+        <Form cars={cars} setToggleFetch={setToggleFetch} />
       </Route>
     </div>
   );
