@@ -39,10 +39,10 @@ function Form(props) {
     };
 
     if (params.id) {
-      const carURL = `${baseURL}/${params.id}`;
+      const carURL = `${baseURL}/cars/${params.id}`;
       await axios.put(carURL, { fields: newCar }, config);
     } else {
-      await axios.post(baseURL, { fields: newCar }, config);
+      await axios.post(`${baseURL}/cars`, { fields: newCar }, config);
     }
     props.setToggleFetch((curr) => !curr);
     setTimeout(() => {

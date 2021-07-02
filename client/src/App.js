@@ -13,12 +13,27 @@ function App() {
   const [toggleFetch, setToggleFetch] = useState(true);
 
   useEffect(() => {
-    const fetchCars = async () => {
-      const resp = await axios.get(baseURL, config);
-      setCars(resp.data.records);
-      console.log(resp.data.records);
-    };
-    fetchCars();
+    const fetchCarsAndComments = async () => {
+      const carsResp = await axios.get(`${baseURL}/cars`, config);
+      const commentsResp = await axios.get(`${baseURL}/comments`, config);
+      const comments = commentsResp.data.records;
+      const linkedCars = carsResp.data.records.map((car) => {
+        return {
+          ...car,
+          fields: {
+            ...car.fields,
+            comments: car.fields.comments
+              ? comments.filter((comment) =>
+                  car.fields.comments.includes(comment.id)
+                )
+              : [],
+          },
+        };
+      });
+      setCars(linkedCars);
+      
+    }
+    fetchCarsAndComments();
   }, [toggleFetch]);
   return (
     <div className="App">
@@ -30,9 +45,9 @@ function App() {
       <Route path="/detail/:id">
         <Detail cars={cars} setToggleFetch={setToggleFetch} />
       </Route>
-     <Route path="/new">
-       <Form setToggleFetch={setToggleFetch}/>
-     </Route>
+      <Route path="/new">
+        <Form setToggleFetch={setToggleFetch} />
+      </Route>
       <Route path="/edit/:id">
         <Form cars={cars} setToggleFetch={setToggleFetch} />
       </Route>
