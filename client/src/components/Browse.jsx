@@ -8,7 +8,7 @@ function Browse(props) {
 
   return (
     <div>
-      <main>
+      <main class="question">
         <p>Can't Find What You're Looking For?</p>
         <Link to="/new">Add a Car</Link>
       </main>

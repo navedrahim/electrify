@@ -1,3 +1,7 @@
+* {
+  font-family: monospace;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -7,14 +11,21 @@ form {
 }
 
 img {
-  max-width: 500px;
+  max-width: 400px;
   height: auto;
 }
 
 
 nav {
   display: flex;
+  background-color: slategrey;
   border-bottom: 5px solid black;
   justify-content: space-between;
   padding: 10px;
+}
+
+#card {
+  padding: 15px;
+  margin: 5px;
+  border: 5px solid black;
 }
