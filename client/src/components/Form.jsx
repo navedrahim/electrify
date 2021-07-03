@@ -51,7 +51,7 @@ function Form(props) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form class="carForm" onSubmit={handleSubmit}>
       <label htmlFor="make">Make:</label>
       <input
         id="make"

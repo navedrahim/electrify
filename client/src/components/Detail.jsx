@@ -8,8 +8,8 @@ function Detail(props) {
   const info = props.cars.find((car) => car.id === params.id);
 
   return (
-    <section>
-      <main id="card">
+    <section id="info">
+      <div id="card">
         <img src={info.fields.image} alt={info.fields.model} />
         <h4>Make:{info.fields.make}</h4>
         <h4>Model:{info.fields.model}</h4>
@@ -19,15 +19,15 @@ function Detail(props) {
         <Link to={`/edit/${info.id}`}>
           <button>Edit Car!</button>
         </Link>
-      </main>
-      <main>
+      </div>
+      <div id="comment">
         <ul>
           {info.fields.comments.map((comment) => (
             <Comment key={comment.id} comment={comment} />
           ))}
         </ul>
         <CommentForm car={props.car} setToggleFetch={props.setToggleFetch} />
-      </main>
+      </div>
     </section>
   );
 }

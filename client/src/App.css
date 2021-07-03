@@ -2,7 +2,7 @@
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-form {
+.carForm {
   display: flex;
   flex-direction: column;
   padding: 12px;
@@ -27,10 +27,12 @@ nav {
   padding: 15px;
   margin: 5px;
   border: 5px solid black;
+  max-width: fit-content;
 }
 
-#logo {
-  border-radius: ;
+#info {
+  display: flex;
+  flex-direction: row;
 }
 
 .question {

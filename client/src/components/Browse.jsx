@@ -13,21 +13,12 @@ function Browse(props) {
           <button>Add a Car</button>
         </Link>
       </main>
-      
-      
+
       <ul>
-      {cars.map((car) => (
-        // <Link to={`/detail/${cars.id}`}>
+        {cars.map((car) => (
           <Car key={car.id} car={car} setToggleFetch={setToggleFetch} />
-        // </Link>
-      ))}
-
+        ))}
       </ul>
-
-     
-      
-      
-      
     </div>
   );
 }
