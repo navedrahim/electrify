@@ -6,6 +6,7 @@ import Browse from "./components/Browse";
 import Navbar from "./components/Navbar";
 import Detail from "./components/Detail";
 import Form from "./components/Form";
+import Home from "./components/Home";
 import "./App.css";
 
 function App() {
@@ -31,13 +32,16 @@ function App() {
         };
       });
       setCars(linkedCars);
-      
-    }
+    };
     fetchCarsAndComments();
   }, [toggleFetch]);
   return (
-    <div className="App">
+    <div class="App">
       <Navbar />
+      <Route exact path="/">
+      <Home/>
+
+      </Route>
 
       <Route exact path="/browse">
         <Browse cars={cars} setToggleFetch={setToggleFetch} />
