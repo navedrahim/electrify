@@ -5,6 +5,13 @@ import Car from "./Car";
 function Browse(props) {
   const { cars, setToggleFetch } = props;
 
+  // const result = cars.reduce(function (r, a) {
+  //   r[a.make] = r[a.make] || [];
+  //   r[a.make].push(a);
+  //   return r;
+  // }, Object.create(null));
+  // console.log(result);
+  // console.log(props)
   return (
     <div>
       <main class="question">

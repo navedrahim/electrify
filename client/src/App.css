@@ -45,6 +45,14 @@ nav {
   max-width: fit-content;
 }
 
+#comment {
+  display: flex;
+  border: 5px solid black;
+  margin: 5px;
+  flex-direction: row;
+  padding: 15px;
+}
+
 #info {
   display: flex;
   flex-direction: row;
