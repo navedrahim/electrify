@@ -4,8 +4,8 @@ function Navbar() {
   return (
     <nav>
       <h1 class="logo">🔌 electrify</h1>
-      <Link to="/">Home</Link>
-      <Link to="/browse">Browse Cars</Link>
+      <Link class="navlink" to="/">Home</Link>
+      <Link class="navlink" to="/browse">Browse Cars</Link>
     </nav>
   );
 }

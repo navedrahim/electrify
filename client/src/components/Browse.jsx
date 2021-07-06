@@ -22,6 +22,7 @@ function Browse(props) {
       </main>
 
       <ul>
+        
         {cars.map((car) => (
           <Car key={car.id} car={car} setToggleFetch={setToggleFetch} />
         ))}

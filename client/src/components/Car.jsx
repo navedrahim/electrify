@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 
 function Car(props) {
   const { car } = props;
+  
   return (
     <div>
     <Link to={`/detail/${car.id}`}>
-      <h3>{car.fields.make} {car.fields.model}</h3>
+      <h3 id="carLink">{car.fields.make} {car.fields.model}</h3>
     </Link>
 
     </div>

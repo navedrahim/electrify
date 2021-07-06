@@ -30,12 +30,29 @@ img {
   height: auto;
 }
 
+input {
+  width: 100%;
+}
+
 
 nav {
   display: flex;
+  flex-direction: row;
   background-color: turquoise;
   justify-content: space-between;
   padding: 10px;
+}
+.navlink {
+  text-decoration: none;
+  margin-top: 20px;
+}
+.navlink:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.navlink:hover {
+  color: white;
 }
 
 #card {
@@ -45,17 +62,32 @@ nav {
   max-width: fit-content;
 }
 
+#carLink {
+  color: black;
+  text-decoration: none;
+}
+
+#carLink:hover {
+  background-color: darkorange;
+  width: fit-content;
+}
+
 #comment {
   display: flex;
-  border: 5px solid black;
-  margin: 5px;
-  flex-direction: row;
+  flex-direction: column;
   padding: 15px;
+  margin: 5px;
+  border: 5px solid black;
+  max-width: fit-content;
 }
 
 #info {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 768px;
+  padding: 15px;
 }
 
 .question {
