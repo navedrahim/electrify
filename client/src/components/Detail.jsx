@@ -26,7 +26,7 @@ function Detail(props) {
             <Comment key={comment.id} comment={comment} />
           ))}
         </ul>
-        <CommentForm car={props.car} setToggleFetch={props.setToggleFetch} />
+        <CommentForm car={info} setToggleFetch={props.setToggleFetch} />
       </div>
     </section>
   );
