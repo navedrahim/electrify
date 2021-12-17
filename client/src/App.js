@@ -2,11 +2,11 @@ import { Route } from "react-router-dom";
 import { baseURL, config } from "./services";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Browse from "./components/Browse";
-import Navbar from "./components/Navbar";
-import Detail from "./components/Detail";
-import Form from "./components/Form";
-import Home from "./components/Home";
+import Browse from "./components/Browse/Browse.jsx";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import Detail from "./components/Detail/Detail.jsx";
+import Form from "./components/Form/Form.jsx";
+import Home from "./components/Home/Home.jsx";
 import "./App.css";
 
 function App() {
@@ -35,14 +35,13 @@ function App() {
     };
     fetchCarsAndComments();
   }, [toggleFetch]);
+  
   return (
-    <div class="App">
+    <div className="App">
       <Navbar />
       <Route exact path="/">
-      <Home/>
-
+        <Home />
       </Route>
-
       <Route exact path="/browse">
         <Browse cars={cars} setToggleFetch={setToggleFetch} />
       </Route>

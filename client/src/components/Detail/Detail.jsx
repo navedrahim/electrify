@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Comment from "./Comment";
-import CommentForm from "./CommentForm";
+import Comment from "../Comment";
+import CommentForm from "../CommentForm";
 
 function Detail(props) {
   const params = useParams();
@@ -10,7 +10,7 @@ function Detail(props) {
   return (
     <section id="info">
       <div id="card">
-        <img src={info.fields.image} alt={info.fields.model} />
+        <img className="detail-image" src={info.fields.image} alt={info.fields.model} />
         <h4>Make:{info.fields.make}</h4>
         <h4>Model:{info.fields.model}</h4>
         <h4>Min Range:{info.fields.minRange} miles</h4>

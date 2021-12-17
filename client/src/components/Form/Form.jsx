@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { baseURL, config } from "../services";
+import { baseURL, config } from "../../services"
 
 function Form(props) {
   const [make, setMake] = useState("");
@@ -51,7 +51,7 @@ function Form(props) {
   };
 
   return (
-    <form class="carForm" onSubmit={handleSubmit}>
+    <form className="carForm" onSubmit={handleSubmit}>
       <label htmlFor="make">Make:</label>
       <input
         id="make"

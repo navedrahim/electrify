@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Car from "./Car";
+import Car from "../Car";
 
 function Browse(props) {
   const { cars, setToggleFetch } = props;
 
   return (
     <div>
-      <main class="question">
+      <main className="question">
         <p>Can't Find What You're Looking For?</p>
         <Link to="/new">
           <button>Add a Car</button>
